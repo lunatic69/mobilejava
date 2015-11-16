@@ -1,0 +1,60 @@
+1. setting -config
+path -exe ->javac, java
+classpath
+컴파일
+javac -d . *.java
+java java1116.test.LeapYearTest
+javap java1116.LeapYear
+
+2. JVM
+JVM < RJE(JVM + lib) < JDK(JRE + Tool)
+
+3. 타입
+기본타입 -값(bsilfd,boolean,char)
+참조타입 -객체 - public class A{}로 시작한다
+
+4. 대입(assign, 할당)
+int a = 100;
+a = 200;
+a += 100; 대입연산이 제일 늦다
+
+5. 패키지
+a.b.c(물리적인 디렉토리)
+java.lang 자동 import
+그 외는 import 해야 함
+
+6. method(no static, 호출하려면 객체 생성 해야 함)
+선언 -> 호출
+
+7. 조건문
+if(true 아니면 false){A}
+else{}
+
+8. 반복문
+for(초기값, 조건, 스탭){반복문}
+
+9. 식별자
+문자
+특수문자 -> X: $. _ 만 가능
+숫자 -> 2번째부터
+
+10. 정수
+%: 나머지
+/: 몫 
+
+11. Overloading
+이름 동일: 인자 개수나 타입이 다름
+
+12. 배열
+같은 타입 나열
+int[] leapYear = {1, 2, 3, ... , 100};
+leapYear = {31, 29}; //X 다시할당, 크기변경
+이름으로 사용
+무궁화 반 [1] leapYear[1] -> 2 getter(access)
+leapYear[1] =-34; //setter/mutator
+
+13. static
+객체 생성하지 않고 사용
+String.format("%d\t", year);
+
+non static 은 객체생성(new)해야 함
