@@ -78,17 +78,14 @@ public class YGCalender {
 	}
 	public static void main(String[] args){
 		YGCalender yg = new YGCalender();
-//		yg.printCalender(2015,  10);
-		yg.printCalender(2015);
+		//		yg.printCalender(2015,  10);
+				yg.printCalender(2015);
 	}
 	public void printCalender(int year) {
 		String s = String.format("\t\t\t%d³â", year);
 		System.out.println(s);
 		for (int i = 1; i < 13; i++) {
 			printCalender(year, i);
-
 		}
 	}
 }
-
-
