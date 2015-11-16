@@ -7,16 +7,16 @@ public class HowLong {
 		int ttot = yg.totalDay(ty, tm, td);
 		int btot = yg.totalDay(dy, bm, bd);
 		tot = ttot - btot;
-		return tot;
+		return tot; 
 	}
-	public double biorythm(int year, int month, int date){
-		int hm = howMany(, hm, hm, hm, hm, hm);
-		double bio = Math.sin(2*(3.14)*howMany())/2);
+	public double Biorythm(int tot){
+		double bio = 100*Math.sin(2*Math.PI*tot/23.0);
 		return bio;
 	}
 	public static void main(String[] args) {
 		HowLong hl = new HowLong();
 		int tot = hl.howMany(2015, 11, 16, 1991, 1, 16);
-		System.out.println(tot);
+		double bio = hl.Biorythm(tot);
+		System.out.println(bio);
 	}
 }
