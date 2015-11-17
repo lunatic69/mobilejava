@@ -1,0 +1,74 @@
+14. Calendar: static 클래스, util.calendar패키지를 import 해야 함
+java.util.Calendar;
+Calendar cal = Calendar.getInstance();
+0~11월
+1~7요일
+
+15. String: final class string: 임의로 변화시킬 수 없는 클래스
+참조 타입이지만 기본형처럼 사용한다.
+String h = "hello!";(new를 사용하지 않는다)
+배열과 String은 new를 사용하지 않는다.(배열은 사용할 수도 있다.)
+자바에서 참조타입은 메모리 상에서 힙(Heap) 영역에 있다.
+char cc = h.charAt(0); //'h;
+//참조 -> 메소드 + data
+char[] dd = h.toCharArray();
+//{'h', 'e', 'l', 'l', 'o'}
+String ih = new String(dd);
+//"hello"
+
+1) String concatenation
+String + 기본타입 -> String
++ => .concat()
+1+2+"hello" = "3hello"
+"hello"+1+2 = "hello12"
+2) immutable
+String은 참조 타입임에도 기본타입처럼 사용된다.(값을 복사한다.)
+기본타입을 assign하지 않으면 원 위치
+int a = 30;
+a = 20;
+int c = a + 50
+a? 20
+h = "hello";
+String ch = h + 30
+StringBuffer hh = new stringBuffer("hello");
+hh.append(30)
+
+math4
+추적 - trace
+11
+12
+1121
+122111
+112213
+12221131
+1123123111
+
+byte a = 10;
+byte b = 20;
+byte c = 30;
+byte d = a+b; //오류 변수가 들어가면 기본형인 int가 된다.
+
+16. Wrapper
+기본타입을  참조타입으로 바꿔주는 클래스
+Byte, Short, Integer, Long/ Float, Double/ Boolean, Character(java.lang 소속)
+String s = "123";
+int a = Integer.ParseInt(s);
+Integer.MAX_VALUE
+
+Character.idDigit(c)
+
+Integer ai = new Integer(456);
+int ia = ai.intValue();
+
+boxing
+integer bi = 456;
+
+unboxing
+int ib = bi;
+
+17. 변환(p 749)
+
+18. 참조타입의 부모 -> Object 클래스
+native가 붙어있다. => JVM에 있는 메소드를 호출함
+메모리 관리를 하지 않는다
+javap java.lang.Object
